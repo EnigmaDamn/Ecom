@@ -1,5 +1,6 @@
 # To run
-run `npm start` to run the site
+First clone the repo.
+run `npm start` to run the site locally
 
 # Sites
 `http://localhost:3000`  for home page
