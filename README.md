@@ -7,5 +7,5 @@ run `npm start` to run the site locally
 `http://localhost:3000/Product` for a individual product page
 
 ## Preview Images
-`https://imgur.com/a/VXEdzkA`
+[Previews](https://imgur.com/a/VXEdzkA)
 
