@@ -61,12 +61,14 @@ const Right = styled.div`
   ${mobile({ flex: 2, justifyContent: "center" })}
 `;
 
-const MenuItem = styled.div`
-  font-size: 14px;
+const TopButton = styled.button`
+  font-weight: 400;
+  margin: 10px;
   cursor: pointer;
-  margin-left: 25px;
-  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
+  background-color: transparent;
+  border: 0;
 `;
+
 
 const Navbar = () => {
   const quantity = useSelector(state=>state.cart.quantity)
@@ -81,17 +83,22 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>HANA.</Logo>
+          <Logo> HANA. </Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+        <Link to="/register">
+          <TopButton>REGISTER</TopButton> 
+        </Link>
+        <Link to="/login">
+          <TopButton>SIGN IN</TopButton>
+        </Link>
+          
           <Link to="/cart">
-          <MenuItem>
+          <TopButton>
             <Badge badgeContent={quantity} color="primary">
               <ShoppingCartOutlined />
             </Badge>
-          </MenuItem>
+          </TopButton>
           </Link>
         </Right>
       </Wrapper>
